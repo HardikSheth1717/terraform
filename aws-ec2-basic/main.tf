@@ -11,7 +11,7 @@ terraform {
 
 provider "aws" {
   region  = "ap-south-1"
-  profile = "cloud-desire02"
+  profile = "default"
 }
 
 resource "aws_instance" "learning_instance" {
