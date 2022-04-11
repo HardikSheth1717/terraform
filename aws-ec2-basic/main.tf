@@ -1,17 +1,17 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws",
-      version = "~> 3.27"
-    }
-  }
+# terraform {
+#   required_providers {
+#     aws = {
+#       source  = "hashicorp/aws",
+#       version = "~> 3.27"
+#     }
+#   }
 
-  required_version = ">= 0.14.9"
-}
+#   required_version = ">= 0.14.9"
+# }
 
 provider "aws" {
   region  = "ap-south-1"
-  profile = "default"
+  profile = "cloud-desire02"
 }
 
 resource "aws_instance" "learning_instance" {
@@ -19,6 +19,6 @@ resource "aws_instance" "learning_instance" {
   instance_type = "t2.micro"
 
   tags = {
-    "Name" = "EC2FromTerraform"
+    "Name" = var.ec2_instance_name_tag
   }
 }
