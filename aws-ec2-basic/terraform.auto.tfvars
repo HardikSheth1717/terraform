@@ -1,0 +1,1 @@
+ec2_instance_name_tag = "ILoveEC2"
